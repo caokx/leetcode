@@ -29,7 +29,6 @@ struct Stack
 
 
 
-//创建二叉树
 struct TreeNode* createBinaryTree(int array[], int n, int index)
 {
 	if (array[index] == -1)
