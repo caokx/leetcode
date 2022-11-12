@@ -17,6 +17,7 @@ struct ListNode
 };
 
 
+//栈
 struct Stack
 {
 	struct ListNode* header;
