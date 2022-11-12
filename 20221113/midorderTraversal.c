@@ -9,6 +9,7 @@ struct TreeNode
 	struct TreeNode* right;
 };
 
+//链表结点
 struct ListNode
 {
 	struct TreeNode* treeNode;
