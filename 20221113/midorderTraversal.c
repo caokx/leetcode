@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<malloc.h>
 
-//树节点 娶你妈比
+//树节点
 struct TreeNode
 {
 	int data;
