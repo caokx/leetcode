@@ -18,19 +18,49 @@ void append(ListNode** head, int val)
     }
     current->next = newNode;  // 连接新节点
 }
-
 //显示整条链表
 void show(ListNode* head)
 {
-    while(head != NULL)
+    ListNode* tmp = head;
+    while(tmp != NULL)
     {
-        printf("%d ", head->val);
-        head = head->next;
+        printf("%d ", tmp->val);
+        tmp = tmp->next;
     }
     printf("\n");
 }
 
+//反转链表
+ListNode* reverseList(ListNode* head) 
+{
+    if(head == NULL)
+    {
+        return NULL;
+    }
+    //创建临时指针
+    ListNode* post;
+    ListNode* tmp;
 
+    if(head->next == NULL)
+    {
+        return head;
+    }
+    else
+    {
+        post = head->next;
+        head->next = NULL;
+    }
+
+    while(post)
+    {
+       
+            tmp = post->next;
+            post->next = head;
+            head = post;
+            post = tmp;
+    }
+    return head;
+}
 int main()
 {
     ListNode * head = NULL;
@@ -38,11 +68,10 @@ int main()
     {
         append(&head, i);
     }
-
-
     show(head);
-
-
+    head = reverseList(head);
+    printf("a\n");
+    show(head);
 }
 
 
